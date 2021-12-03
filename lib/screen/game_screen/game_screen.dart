@@ -19,7 +19,11 @@ class GameScreen extends StatelessWidget {
       body: Column(
         children: [
           ButtonItem(
-            icon: const Icon(Icons.remove),
+            icon: const Icon(
+                Icons.close,
+              color: Colors.white,
+              size: 50,
+            ),
             color: Colors.blue,
             onTap: controller.onTapMinus,
           ),
@@ -33,7 +37,8 @@ class GameScreen extends StatelessWidget {
                   animationCurveExpand: Curves.bounceOut,
                   animationCurveContract: Curves.ease,
                   //TODO ここで高さの設定ができる
-                  persistentContentHeight: MediaQuery.of(context).size.height + 100,
+                  persistentContentHeight:
+                      MediaQuery.of(context).size.height + 100,
                   background: Container(
                     //color: Colors.blue[800],
                     color: Colors.blue,
@@ -44,7 +49,9 @@ class GameScreen extends StatelessWidget {
                     child: SingleChildScrollView(
                       child: Column(
                         children: <Widget>[
-                          for (int i = 0; i < controller.contentAmount.value; i++)
+                          for (int i = 0;
+                              i < controller.contentAmount.value;
+                              i++)
                             Container(
                               //TODO　あとで高さを変える
                               height: 50,
@@ -56,7 +63,11 @@ class GameScreen extends StatelessWidget {
                     ),
                   ),
                   persistentFooter: ButtonItem(
-                    icon: const Icon(Icons.add),
+                    icon: const Icon(
+                      Icons.circle,
+                      color: Colors.white,
+                      size: 50,
+                    ),
                     color: Colors.red,
                     onTap: controller.onTapPlus,
                   ),
