@@ -25,7 +25,8 @@ class GameScreen extends StatelessWidget {
           ),
           Expanded(
             child: Center(
-              child: Obx(() => ExpandableBottomSheet(
+              child: Obx(
+                () => ExpandableBottomSheet(
                   key: key,
                   animationDurationExtend: const Duration(milliseconds: 200),
                   animationDurationContract: const Duration(milliseconds: 200),
@@ -35,7 +36,8 @@ class GameScreen extends StatelessWidget {
                   persistentContentHeight:
                       MediaQuery.of(context).size.height + 100,
                   background: Container(
-                    color: Colors.blue[800],
+                    //color: Colors.blue[800],
+                    color: Colors.blue,
                   ),
                   expandableContent: Container(
                     constraints: BoxConstraints(
@@ -50,7 +52,7 @@ class GameScreen extends StatelessWidget {
                               //TODO　あとで高さを変える
                               height: 50,
                               //color: Colors.red[((i % 8) + 1) * 100],
-                                color: Colors.red,
+                              color: Colors.red,
                             ),
                         ],
                       ),
