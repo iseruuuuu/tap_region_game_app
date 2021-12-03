@@ -33,8 +33,7 @@ class GameScreen extends StatelessWidget {
                   animationCurveExpand: Curves.bounceOut,
                   animationCurveContract: Curves.ease,
                   //TODO ここで高さの設定ができる
-                  persistentContentHeight:
-                      MediaQuery.of(context).size.height + 100,
+                  persistentContentHeight: MediaQuery.of(context).size.height + 100,
                   background: Container(
                     //color: Colors.blue[800],
                     color: Colors.blue,
