@@ -1,6 +1,7 @@
 import 'package:expandable_bottom_sheet/expandable_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tap_region_app/component/button_item.dart';
 import 'game_screen_controller.dart';
 
 class GameScreen extends StatelessWidget {
@@ -17,14 +18,10 @@ class GameScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(
+          ButtonItem(
+            icon: const Icon(Icons.remove),
             color: Colors.yellow,
-            height: 80,
-            width: double.infinity,
-            child: IconButton(
-              icon: const Icon(Icons.remove),
-              onPressed: controller.onTapMinus,
-            ),
+            onTap: controller.onTapPlus,
           ),
           Expanded(
             child: Center(
@@ -58,14 +55,10 @@ class GameScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  persistentFooter: Container(
+                  persistentFooter: ButtonItem(
+                    icon: const Icon(Icons.add),
                     color: Colors.green,
-                    height: 80,
-                    width: double.infinity,
-                    child: IconButton(
-                      icon: const Icon(Icons.add),
-                      onPressed: controller.onTapPlus,
-                    ),
+                    onTap: controller.onTapPlus,
                   ),
                 ),
               ),
