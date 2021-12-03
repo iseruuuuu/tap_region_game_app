@@ -21,7 +21,7 @@ class GameScreen extends StatelessWidget {
           ButtonItem(
             icon: const Icon(Icons.remove),
             color: Colors.yellow,
-            onTap: controller.onTapPlus,
+            onTap: controller.onTapMinus,
           ),
           Expanded(
             child: Center(
