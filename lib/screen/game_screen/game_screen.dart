@@ -20,7 +20,7 @@ class GameScreen extends StatelessWidget {
         children: [
           ButtonItem(
             icon: const Icon(Icons.remove),
-            color: Colors.yellow,
+            color: Colors.blue,
             onTap: controller.onTapMinus,
           ),
           Expanded(
@@ -49,7 +49,8 @@ class GameScreen extends StatelessWidget {
                             Container(
                               //TODO　あとで高さを変える
                               height: 50,
-                              color: Colors.red[((i % 8) + 1) * 100],
+                              //color: Colors.red[((i % 8) + 1) * 100],
+                                color: Colors.red,
                             ),
                         ],
                       ),
@@ -57,7 +58,7 @@ class GameScreen extends StatelessWidget {
                   ),
                   persistentFooter: ButtonItem(
                     icon: const Icon(Icons.add),
-                    color: Colors.green,
+                    color: Colors.red,
                     onTap: controller.onTapPlus,
                   ),
                 ),

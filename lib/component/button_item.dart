@@ -15,7 +15,13 @@ class ButtonItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: color,
+      decoration: BoxDecoration(
+        color: color,
+        border: Border.all(
+          color: Colors.black,
+          width: 10,
+        ),
+      ),
       height: 80,
       width: double.infinity,
       child: IconButton(
