@@ -20,7 +20,7 @@ class GameScreen extends StatelessWidget {
         children: [
           ButtonItem(
             icon: const Icon(
-                Icons.close,
+              Icons.circle,
               color: Colors.white,
               size: 50,
             ),

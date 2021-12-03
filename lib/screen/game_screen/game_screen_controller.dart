@@ -45,6 +45,7 @@ class GameScreenController extends GetxController {
       title: '赤の勝ち!!!!',
       confirmBtnText: '次へ',
       barrierDismissible: false,
+      confirmBtnColor: Colors.red,
     );
   }
 
@@ -55,6 +56,7 @@ class GameScreenController extends GetxController {
       title: '青の勝ち!!!!',
       confirmBtnText: '次へ',
       barrierDismissible: false,
+      confirmBtnColor: Colors.blue,
     );
   }
 }
