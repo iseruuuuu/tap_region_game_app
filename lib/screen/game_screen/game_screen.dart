@@ -44,9 +44,7 @@ class GameScreen extends StatelessWidget {
                     child: SingleChildScrollView(
                       child: Column(
                         children: <Widget>[
-                          for (int i = 0;
-                              i < controller.contentAmount.value;
-                              i++)
+                          for (int i = 0; i < controller.contentAmount.value; i++)
                             Container(
                               //TODO　あとで高さを変える
                               height: 50,
