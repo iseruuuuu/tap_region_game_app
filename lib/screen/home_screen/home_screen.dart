@@ -7,7 +7,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //TODO タグの変更が必要
     final controller = Get.put(HomeScreenController(), tag: '');
     return Scaffold(
       backgroundColor: Colors.white,
