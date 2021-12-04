@@ -10,6 +10,12 @@ class GameScreenController extends GetxController {
 
   var isWinner = false.obs;
 
+  @override
+  void onInit() {
+    super.onInit();
+    //startDialog();
+  }
+
   void onTapPlus() {
     if (contentAmount < 10) {
       contentAmount++;
@@ -43,9 +49,13 @@ class GameScreenController extends GetxController {
       context: Get.context!,
       type: CoolAlertType.error,
       title: '赤の勝ち!!!!',
-      confirmBtnText: '次へ',
+      confirmBtnText: 'タイトルへ',
       barrierDismissible: false,
       confirmBtnColor: Colors.red,
+      onConfirmBtnTap: () {
+        Get.back();
+        Get.back();
+      },
     );
   }
 
@@ -54,9 +64,33 @@ class GameScreenController extends GetxController {
       context: Get.context!,
       type: CoolAlertType.info,
       title: '青の勝ち!!!!',
-      confirmBtnText: '次へ',
+      confirmBtnText: 'タイトルへ',
       barrierDismissible: false,
       confirmBtnColor: Colors.blue,
+      onConfirmBtnTap: () {
+        Get.back();
+        Get.back();
+      },
+    );
+  }
+
+  void startDialog() {
+    showDialog(
+      context: Get.context!,
+      barrierDismissible: false,
+      builder: (_) {
+        return AlertDialog(
+          title: Text("This is the title"),
+          content: Text("This is the content"),
+          actions: [
+            FlatButton(child: Text("Cancel"), onPressed: () {}),
+            FlatButton(
+              child: Text("OK"),
+              onPressed: () => print('OK'),
+            ),
+          ],
+        );
+      },
     );
   }
 }

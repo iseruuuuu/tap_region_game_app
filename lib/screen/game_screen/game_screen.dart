@@ -64,7 +64,7 @@ class GameScreen extends StatelessWidget {
                   ),
                   persistentFooter: ButtonItem(
                     icon: const Icon(
-                      Icons.circle,
+                      Icons.close,
                       color: Colors.white,
                       size: 50,
                     ),
