@@ -10,6 +10,7 @@ class GameScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(GameScreenController(), tag: '');
+    final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
@@ -37,15 +38,12 @@ class GameScreen extends StatelessWidget {
                   animationCurveExpand: Curves.bounceOut,
                   animationCurveContract: Curves.ease,
                   //TODO ここで高さの設定ができる
-                  persistentContentHeight:
-                      MediaQuery.of(context).size.height + 100,
+                  persistentContentHeight: deviceSize.height + 100,
                   background: Container(
-                    //color: Colors.blue[800],
                     color: Colors.blue,
                   ),
                   expandableContent: Container(
-                    constraints: BoxConstraints(
-                        maxHeight: MediaQuery.of(context).size.height - 150),
+                    constraints: BoxConstraints(maxHeight: deviceSize.height - 150),
                     child: SingleChildScrollView(
                       child: Column(
                         children: <Widget>[
@@ -54,7 +52,8 @@ class GameScreen extends StatelessWidget {
                               i++)
                             Container(
                               //TODO　あとで高さを変える
-                              height: 50,
+                              //height: 50,
+                              height: deviceSize.height / 12,
                               //color: Colors.red[((i % 8) + 1) * 100],
                               color: Colors.red,
                             ),
